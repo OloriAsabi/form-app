@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+.app{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background: url(./Images/download-2.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Lato', sans-serif;
+}
+input{
+    padding: 15px;
+    margin: 10px 0px ;
+    border-radius: 5px;
+    border: 1px solid goldenrod;
+}
+form{
+    background:rgb(0, 0, 0, 0.7);
+    padding: 0px 60px;
+    border-radius: 10px;
+    color: #ffffff;
+}
+h1{
+    text-align: center;
+    font-weight: 600;
+
+}
+button{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    background-color: blanchedalmond;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+label{
+    font-size: 20px;
+}
+.formInput{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+span{
+    font-size: 15px;
+    padding: 3px;
+    color: red;
+    display: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input:invalid[focused="true"] ~ span{
+   display: block; 
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input:invalid[focused="true"] {
+    border: 1px solid red;
 }
